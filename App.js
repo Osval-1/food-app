@@ -1,11 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import { StatusBar } from "expo-status-bar";
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  ActivityIndicator,
+} from "react-native";
+import Login from "./src/pages/AuthScreens/Login";
+import Button from "./src/components/ui/Button";
+import { colors } from "./src/styles/colors";
+import Signup from "./src/pages/AuthScreens/Signup";
+import Customer from "./src/pages/AuthScreens/Customer";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar barStyle="light-content" backgroundColor={colors.primary} />
+      {/* <Login/> */}
+      {/* <Signup /> */}
+      <Customer />
+      <ActivityIndicator style={styles.center} animating={true} />
     </View>
   );
 }
@@ -13,8 +27,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#ffffff",
   },
 });
